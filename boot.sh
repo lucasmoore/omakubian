@@ -17,12 +17,12 @@ sudo apt-get install -y git >/dev/null
 
 echo "Cloning Omakub..."
 rm -rf ~/.local/share/omakubian
-git clone https://github.com/lucasmoore/omakubian.git ~/.local/share/omakubianian >/dev/null
+git clone https://github.com/lucasmoore/omakubian.git ~/.local/share/omakubian >/dev/null
 if [[ $OMAKUB_REF != "master" ]]; then
-	cd ~/.local/share/omakubianian
+	cd ~/.local/share/omakubian
 	git fetch origin "${OMAKUB_REF:-stable}" && git checkout "${OMAKUB_REF:-stable}"
 	cd -
 fi
 
 echo "Installation starting..."
-source ~/.local/share/omakubianian/install.sh
+source ~/.local/share/omakubian/install.sh
