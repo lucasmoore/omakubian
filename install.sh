@@ -16,8 +16,8 @@ source ~/.local/share/omakubian/install/identification.sh
 # Desktop software and tweaks will only be installed if we're running Gnome
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   # Ensure computer doesn't go to sleep or lock while installing
-  gsettings set org.gnome.desktop.screensaver lock-enabled false
-  gsettings set org.gnome.desktop.session idle-delay 0
+  #gsettings set org.gnome.desktop.screensaver lock-enabled false
+  #gsettings set org.gnome.desktop.session idle-delay 0
 
   echo "Installing terminal and desktop tools..."
 
@@ -25,7 +25,7 @@ if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   source ~/.local/share/omakubian/install/terminal.sh
 
   # Install desktop tools and tweaks
-  source ~/.local/share/omakubian/install/desktop.sh
+  #source ~/.local/share/omakubian/install/desktop.sh
 
   # Revert to normal idle and lock settings
   gsettings set org.gnome.desktop.screensaver lock-enabled true
